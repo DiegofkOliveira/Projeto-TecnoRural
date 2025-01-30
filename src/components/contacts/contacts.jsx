@@ -18,17 +18,23 @@ function Contact() {
             <div className="w-full max-w-[1200px] h-auto flex items-center justify-center">
                 <div className="grid grid-cols-2 gap-4 w-full h-auto max-w-[800px] px-6 items-center justify-evenly md:px-0 md:flex">
                     <a className="group flex border border-green-600 rounded-full w-40 h-10 items-center shadow-xl shadow-green-500/50 justify-center gap-2 text-green-600 hover:bg-green-600 hover:text-white transtion duration-500"
-                        href="https://wa.me/555599154228?text=Olá, gostaria de saber mais!">
+                        href="https://wa.me/555599154228?text=Olá, gostaria de saber mais!"
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <FaWhatsapp className="w-6 h-6" />
                         <h2 className="text-xl">WhatsApp</h2>
                     </a>
                     <a className="group flex border border-red-600 rounded-full w-40 h-10 items-center shadow-xl shadow-red-500/50 justify-center gap-2 text-red-600 hover:bg-red-600 hover:text-white transtion duration-500"
-                        href="https://mail.google.com/mail/?view=cm&fs=1&to=danieloliveira1804@gmail.com.com&su=Assunto&body=Mensagem">
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=danieloliveira1804@gmail.com.com&su=Assunto&body=Mensagem"
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <BiLogoGmail className="w-6 h-6" />
                         <h2 className="text-xl">Gmail</h2>
                     </a>
                     <a className="group flex border border-sky-600 rounded-full w-40 h-10 items-center shadow-xl shadow-sky-500/50 justify-center gap-2 text-sky-600 hover:bg-sky-600 hover:text-white transtion duration-500"
-                        href="https://outlook.live.com/mail/0/deeplink/compose?to=danieloliveira1804@gmail.com.com&subject=Assunto&body=Mensagem">
+                        href="https://outlook.live.com/mail/0/deeplink/compose?to=danieloliveira1804@gmail.com.com&subject=Assunto&body=Mensagem"
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <PiMicrosoftOutlookLogo className="w-6 h-6" />
                         <h2 className="text-xl">Outlook</h2>
                     </a>
@@ -69,7 +75,7 @@ function Contact() {
                             name="email"
                             id="email"
                             placeholder="Digite seu email"
-                            required/>
+                            required />
                         <span id="email-error" className="text-red-600 text-sm hidden">
                             O e-mail fornecido está incorreto.
                         </span>

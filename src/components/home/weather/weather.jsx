@@ -51,7 +51,7 @@ function Weather() {
                         </div>
 
                     </div>
-                    <div className='w-full h-auto gap-4 py-4 flex flex-col items-center md:gap-0 md:flex-row lg:gap-0 lg:flex-row'>
+                    <div className='w-full h-auto gap-4 py-4 flex flex-col items-center md:gap-0 md:flex-row'>
                         {weather5Days && <WeatherInformations5Days weather5Days={weather5Days} />}
                     </div>
                 </div>

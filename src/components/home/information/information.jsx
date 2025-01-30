@@ -29,7 +29,7 @@ function Information() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full h-full">
+                <div className="w-full h-full px-12 md:px-0">
                     <img className="rounded-lg shadow-xl shadow-gray-500/60" src="https://blog.climatefieldview.com.br/hs-fs/hubfs/incorporacao-novas-tecnologias.webp?width=832&name=incorporacao-novas-tecnologias.webp" alt="" />
                 </div>
                 <div className="w-full flex flex-col items-center justify-evenly gap-8">

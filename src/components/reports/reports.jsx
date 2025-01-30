@@ -1,4 +1,4 @@
-import { GiCube } from "react-icons/gi";
+import { IoIosArrowDropdown } from "react-icons/io";
 import BancoBrasil from "../../assets/bb.png"
 import Caixa from "../../assets/caixa.png"
 import Cresol from "../../assets/cresol.png"
@@ -11,13 +11,13 @@ function Reports() {
         <div className="w-full h-auto flex flex-col items-center justify-center py-5 font-gummy">
             <div className='max-w-[1200px] w-full h-24 flex px-8 py-8 items-center justify-between font-extralight '>
                 <div className='w-80 h-auto flex gap-10'>
-                    <GiCube className="w-7 h-7 text-green-800" />
+                    <IoIosArrowDropdown className="w-8 h-8 text-green-800" />
                     <h3 className='text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800'>Laudos Técnicos</h3>
                 </div>
             </div>
             <div className="w-full max-w-[1200px] h-auto flex flex-col items-start justify-center">
-                <h1 className="py-10 text-2xl text-medium bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800">Escolha o seu Banco:</h1>
-                <div className="flex w-full h-screen items-start justify-evenly">
+                <h1 className="py-10 px-4 text-2xl text-medium bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800">Escolha o seu Banco:</h1>
+                <div className="grid grid-cols-2 w-full h-auto items-start justify-items-center gap-10 px-4 md:grid-cols-3 lg:flex lg:flex-row">
                     <a className="group flex border border-yellow-400 rounded-full w-48 h-10 items-center shadow-xl shadow-yellow-400 justify-center gap-2 text-blue-800 hover:bg-yellow-400 hover:text-white transtion duration-500" href="">
                         <img className="w-6 h-6" src={BancoBrasil} alt="" />
                         <h2 className="text-xl">Banco do Brasil</h2>

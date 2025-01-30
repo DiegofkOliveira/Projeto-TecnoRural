@@ -30,33 +30,33 @@ function Cotacao() {
                 <div className="flex flex-col w-full h-auto items-center justify-start py-2 gap-6 lg:h-80">
                     <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800 font-gummy font-extralight text-3xl">Cotação</h1>
                     <div className="w-full flex flex-col items-center justify-between md:flex-row lg:flex-row">
-                        <div className="w-80 h-56 flex flex-col items-center justify-center">
+                        <div className="w-full h-auto flex flex-col items-center justify-center">
                             <img className="w-20 h-20" src="https://sistemafaep.org.br/wp-content/uploads/cotacoes/imgs/cbot-soja.png" alt="Imagem de grãos da soja" />
                             <h2 className="text-2xl pb-2 bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800 font-gummy font-light">Soja</h2>
                             {last4Dates.map((date, index) => (
-                                <div key={index} className="w-3/4 flex flex-row items-center justify-center text-center gap-2 border border-green-500 roudend">
-                                    <p className="flex items-center justify-center font-semibold bg-green-500 text-gray-100 w-1/2">{date}</p>
-                                    <p className="flex items-center justify-center w-1/2">{valueSoja[index]}</p>
+                                <div key={index} className="w-auto flex flex-row items-center justify-center text-center gap-2 border border-green-500 roudend">
+                                    <p className="w-[130px] px-2 flex items-center justify-center font-semibold bg-green-500 text-gray-100 md:w-[100px] lg:w-[130px]">{date}</p>
+                                    <p className="w-[130px] px-2 flex items-center justify-center md:w-[100px] lg:w-[130px]">{valueSoja[index]}</p>
                                 </div>
                             ))}
                         </div>
-                        <div className="w-80 h-56 flex flex-col items-center justify-center">
+                        <div className="w-full h-auto flex flex-col items-center justify-center">
                             <img className="w-20 h-20" src="https://sistemafaep.org.br/wp-content/uploads/cotacoes/imgs/cbot-milho.png" alt="Imagem de grãos da soja" />
                             <h2 className="text-2xl pb-2 bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800 font-gummy font-light">Milho</h2>
                             {last4Dates.map((date, index) => (
-                                <div key={index} className="w-3/4 flex flex-row items-center justify-center text-center gap-2 border border-green-500 roudend">
-                                    <p className="flex items-center justify-center font-semibold bg-green-500 text-gray-100 w-1/2">{date}</p>
-                                    <p className="flex items-center justify-center w-1/2">{valueMilho[index]}</p>
+                                <div key={index} className="w-auto flex flex-row items-center justify-center text-center gap-2 border border-green-500 roudend">
+                                    <p className="w-[130px] px-2 flex items-center justify-center font-semibold bg-green-500 text-gray-100 md:w-[100px] lg:w-[130px]">{date}</p>
+                                    <p className="w-[130px] px-2 flex items-center justify-center md:w-[100px] lg:w-[130px]">{valueMilho[index]}</p>
                                 </div>
                             ))}
                         </div>
-                        <div className="w-80 h-56 flex flex-col items-center justify-center">
+                        <div className="w-full h-auto flex flex-col items-center justify-center">
                             <img className="w-20 h-20" src="https://sistemafaep.org.br/wp-content/uploads/cotacoes/imgs/cbot-trigomole.png" alt="Imagem de grãos da soja" />
                             <h2 className="text-2xl pb-2 bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800 font-gummy font-light">Trigo</h2>
                             {last4Dates.map((date, index) => (
-                                <div key={index} className="w-3/4 flex flex-row items-center justify-center text-center gap-2 border border-green-500 roudend">
-                                    <p className="flex items-center justify-center font-semibold bg-green-500 text-gray-100 w-1/2">{date}</p>
-                                    <p className="flex items-center justify-center w-1/2">{valueTrigo[index]}</p>
+                                <div key={index} className="w-auto flex flex-row items-center justify-center text-center gap-2 border border-green-500 roudend">
+                                    <p className="w-[130px] px-2 flex items-center justify-center font-semibold bg-green-500 text-gray-100 md:w-[100px] lg:w-[130px]">{date}</p>
+                                    <p className="w-[130px] px-2 flex items-center justify-center md:w-[100px] lg:w-[130px]">{valueTrigo[index]}</p>
                                 </div>
                             ))}
                         </div>
