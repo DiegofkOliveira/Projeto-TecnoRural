@@ -11,7 +11,6 @@ import End from '../templates/end/end.jsx';
 function Rotas() {
   return (
     <Router>
-      <nav>
         <Top />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,7 +22,6 @@ function Rotas() {
         <footer className="w-full h-auto flex flex-col items-center justify-center bg-green-500 p-4">
           <End />
         </footer>
-      </nav>
     </Router>
   );
 }

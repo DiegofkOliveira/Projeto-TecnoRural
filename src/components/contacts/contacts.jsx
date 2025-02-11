@@ -16,7 +16,7 @@ function Contact() {
                 </div>
             </div>
             <div className="w-full max-w-[1200px] h-auto flex items-center justify-center">
-                <div className="grid grid-cols-2 gap-4 w-full h-auto max-w-[800px] px-6 items-center justify-evenly md:px-0 md:flex">
+                <div className="grid grid-cols-2 gap-4 w-full h-auto max-w-[800px] items-center justify-items-center md:px-0 md:flex">
                     <a className="group flex border border-green-600 rounded-full w-40 h-10 items-center shadow-xl shadow-green-500/50 justify-center gap-2 text-green-600 hover:bg-green-600 hover:text-white transtion duration-500"
                         href="https://wa.me/555599154228?text=Olá, gostaria de saber mais!"
                         target="_blank"
