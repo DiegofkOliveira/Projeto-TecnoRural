@@ -48,7 +48,7 @@ function End() {
                         </p>
                         <p className="mb-1 text-lg"><a href="/laudo" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Laudo</a>
                         </p>
-                        <p className="mb-1 text-lg"><a href="/laudo" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Contratos</a>
+                        <p className="mb-1 text-lg"><a href="/projeto" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Projeto</a>
                         </p>
                         <p className="mb-1 text-lg"><a href="/contato" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Contato</a>
                         </p>
