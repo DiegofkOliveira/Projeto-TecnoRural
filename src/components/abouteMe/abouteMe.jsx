@@ -4,7 +4,7 @@ import TecAgricola from '../../../public/tecAgr.png';
 
 export default function Sobre() {
     return (
-        <div className="w-full h-auto flex flex-col items-center justify-center py-5 font-gummy">
+        <div className="w-full h-auto flex flex-col items-center justify-center pt-28 pb-5 font-gummy">
             <div className='max-w-[1200px] h-auto flex flex-col px-8 py-10 items-start justify-center font-extralight'>
                 <div className='w-56 h-auto flex gap-10'>
                     <FaRegBuilding className="w-8 h-8 text-green-700"/>

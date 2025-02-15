@@ -8,7 +8,7 @@ import { IoIosArrowDropdown } from "react-icons/io";
 
 function Contact() {
     return (
-        <div className="w-full h-auto flex flex-col items-center justify-center py-5 font-gummy">
+        <div className="w-full h-auto flex flex-col items-center justify-center pt-28 pb-5 font-gummy">
             <div className='max-w-[1200px] w-full h-24 flex px-8 py-8 items-center justify-between font-extralight '>
                 <div className='w-80 h-auto flex items-center gap-10'>
                     <IoIosArrowDropdown className="w-10 h-10 text-green-800" />
@@ -16,7 +16,7 @@ function Contact() {
                 </div>
             </div>
             <div className="w-full max-w-[1200px] h-auto flex items-center justify-center">
-                <div className="grid grid-cols-2 gap-4 w-full h-auto max-w-[800px] items-center justify-items-center md:px-0 md:flex">
+                <div className="grid grid-cols-2 gap-4 w-full h-auto max-w-[800px] items-center justify-items-center md:px-0 md:justify-center md:flex">
                     <a className="group flex border border-green-600 rounded-full w-40 h-10 items-center shadow-xl shadow-green-500/50 justify-center gap-2 text-green-600 hover:bg-green-600 hover:text-white transtion duration-500"
                         href="https://wa.me/555599154228?text=Olá, gostaria de saber mais!"
                         target="_blank"

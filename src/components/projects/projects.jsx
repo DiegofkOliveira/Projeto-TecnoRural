@@ -1,33 +1,109 @@
 import { useState } from "react";
 import { IoIosArrowDropdown } from "react-icons/io";
+import { TbPointFilled } from "react-icons/tb";
+import Swal from "sweetalert2";
 import BancoBrasil from "../../assets/bb.png";
-import Caixa from "../../assets/caixa.png";
+import Banrisul from "../../assets/banrisul.png";
 import Cresol from "../../assets/cresol.png";
 import Sicoob from "../../assets/sicoob.png";
 import Sicredi from "../../assets/sicredi.png";
 
-function Reports() {
+function Projects() {
     const [bancoSelecionado, setBancoSelecionado] = useState(null);
     const [formData, setFormData] = useState({
         nome: "",
         email: "",
         documento: "",
+        arquivos: [],
     });
+
+    const itensPorBanco = {
+        "Banco do Brasil": ["Car (cadastro ambiental)", "ITR", "Contrato de arrendamento", "Matrícula atualizada ou certidão de ônus"],
+        Sicredi: ["Área demarcada", "Car", "Contrato de arrendamento"],
+        Sicoob: ["Car", "Variedade comprada", "Área demarcada", "Contrato de arrendamento"],
+        Cresol: ["Área demarcada", "Car", "Contrato de arrendamento"],
+        Banrisul: ["Car", "Área demarcada kml", "Contrato de arrendamento"],
+    };
 
     // Função para atualizar os dados do formulário
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const handleFileChange = (e) => {
+        setFormData({
+            ...formData,
+            arquivos: [...formData.arquivos, ...e.target.files],
+        });
+    };
+
+    const removeFile = (index) => {
+        setFormData({
+            ...formData,
+            arquivos: formData.arquivos.filter((_, i) => i !== index),
+        });
+    };
+
     // Função para enviar o formulário (Futuro: integrar com EmailJS ou API)
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Enviando dados:", formData);
-        alert(`Formulário enviado com sucesso para o ${bancoSelecionado}!`);
+
+        // Exibe um alerta de carregamento
+        Swal.fire({
+            title: "Enviando...",
+            text: "Aguarde enquanto processamos seus dados.",
+            allowOutsideClick: false,
+            didOpen: () => {
+                Swal.showLoading();
+            },
+        });
+
+        try {
+            // Simulação de envio para API (substitua pela sua URL)
+            const response = await fetch("https://sua-api.com/enviar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error("Erro ao enviar os dados");
+            }
+
+            // Exibe um alerta de sucesso
+            Swal.fire({
+                title: "Sucesso!",
+                text: "Formulário enviado com sucesso!",
+                icon: "success",
+                confirmButtonText: "OK",
+                timer: 3000,
+                timerProgressBar: true,
+            });
+
+            // Limpa os campos após o envio
+            setFormData({
+                nome: "",
+                email: "",
+                documento: "",
+            });
+
+        } catch (error) {
+            console.error("Erro no envio:", error);
+
+            // Exibe um alerta de erro
+            Swal.fire({
+                title: "Erro!",
+                text: "Ocorreu um problema ao enviar. Tente novamente.",
+                icon: "error",
+                confirmButtonText: "OK",
+            });
+        }
     };
 
     return (
-        <div className="w-full h-auto flex flex-col items-center justify-center py-5 font-gummy">
+        <div className="w-full h-auto flex flex-col items-center justify-center pt-28 pb-5 font-gummy">
             {/* Título */}
             <div className="max-w-[1200px] w-full h-24 flex px-8 py-8 items-center justify-between font-extralight">
                 <div className="w-80 h-auto flex gap-10">
@@ -77,56 +153,83 @@ function Reports() {
 
                 <button
                     className="group flex border border-blue-600 rounded-full w-48 h-10 items-center shadow-xl shadow-blue-500/50 justify-center gap-2 text-blue-600 hover:bg-blue-600 hover:text-white transition duration-500"
-                    onClick={() => setBancoSelecionado("Caixa Federal")}
+                    onClick={() => setBancoSelecionado("Banrisul")}
                 >
-                    <img className="w-6 h-6" src={Caixa} alt="Caixa Federal" />
-                    <h2 className="text-xl">Caixa Federal</h2>
+                    <img className="w-10 h-10" src={Banrisul} alt="Banrisul" />
+                    <h2 className="text-xl">Banrisul</h2>
                 </button>
             </div>
 
-
             {/* Formulário Condicional */}
             {bancoSelecionado && (
-                <div className="w-full max-w-md bg-white p-6 mt-10 shadow-lg rounded-lg border border-gray-300">
+                <div className="w-full max-w-[800px] bg-white p-6 mt-10 shadow-lg rounded-lg border border-gray-300">
                     <h2 className="text-xl font-bold text-green-600">Informações para {bancoSelecionado}</h2>
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-4">
-                        <label className="flex flex-col">
+                    <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4 mt-4">
+                        <label className="group border border-gray-300 rounded-lg w-full h-16 p-2 focus-within:border-2 focus-within:border-green-500 transition duration-300">
                             <span className="text-gray-600">Nome:</span>
-                            <input
+                            <input className="border-none outline-none w-full"
                                 type="text"
                                 name="nome"
                                 value={formData.nome}
                                 onChange={handleChange}
-                                className="p-2 border rounded-md"
-                                required
-                            />
+                                required />
                         </label>
-
-                        <label className="flex flex-col">
+                        <label className="group border border-gray-300 rounded-lg w-full h-16 p-2 focus-within:border-2 focus-within:border-green-500 transition duration-300">
+                            <span className="text-gray-600">Telefone:</span>
+                            <input className="border-none outline-none w-full"
+                                type="tel"
+                                name="telefone"
+                                value={formData.telefone} 
+                                onChange={handleChange}
+                                pattern="\d{10,11}"
+                                required />
+                        </label>
+                        <label className="group border border-gray-300 rounded-lg w-full h-16 p-2 focus-within:border-2 focus-within:border-green-500 transition duration-300">
                             <span className="text-gray-600">E-mail:</span>
-                            <input
+                            <input className="border-none outline-none w-full"
                                 type="email"
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="p-2 border rounded-md"
-                                required
-                            />
+                                required />
+                            <span id="email-error" className="text-red-600 text-sm hidden">
+                                O e-mail fornecido está incorreto.
+                            </span>
                         </label>
 
-                        <label className="flex flex-col">
-                            <span className="text-gray-600">Documento:</span>
-                            <input
-                                type="file"
-                                name="documento"
-                                onChange={handleChange}
-                                className="p-2 border rounded-md"
-                                required
-                            />
-                        </label>
+                        <div className="w-full flex flex-col items-start mt-4 pb-8">
+                            <h1 className="text-lg font-semibold">Anexe os seguintes arquivos:</h1>
+                            <ul className="mt-2">
+                                {itensPorBanco[bancoSelecionado].map((item, index) => (
+                                    <li key={index} className="flex items-center gap-2 text-gray-700">
+                                        <TbPointFilled className="text-green-500" />
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div className="w-full h-auto pt-20 flex flex-col items-center justify-end p-4 bg-gradient-to-r from-blue-400 to-blue-700 rounded-lg shadow-lg h-40 relative">
+                            <div className="absolute top-[-5px] transform -translate-x-1/2 animate-bounce transition-transform hover:scale-105">
+                                <div className="relative w-32 h-20">
+                                    <div className="absolute top-[-10px] w-20 h-5 bg-gradient-to-r from-orange-400 to-orange-500 rounded-t-lg shadow-md z-10"></div>
+                                    <div className="absolute w-32 h-20 bg-gradient-to-r from-yellow-300 to-yellow-500 rounded-lg shadow-md z-0"></div>
+                                </div>
+                            </div>
+                            <input type="file" multiple onChange={handleFileChange} className="hidden" id="file-upload" />
+                            <label htmlFor="file-upload" className="mt-6 px-6 py-2 text-lg text-white bg-white/20 rounded-lg shadow-md cursor-pointer transition hover:bg-white/40">Anexar Arquivos</label>
+                            <ul className="mt-4 w-full h-auto flex flex-col gap-2">
+                                {formData.arquivos.map((file, index) => (
+                                    <li key={index} className="w-full h-auto flex justify-between items-center bg-gray-200 p-2 gap-2 rounded-lg">
+                                        <span className="truncate max-w-[80%] overflow-hidden whitespace-nowrap">{file.name}</span>
+                                        <button type="button" onClick={() => removeFile(index)} className="text-red-600">Remover</button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
 
                         <button className="group flex border border-green-500 rounded-lg w-full h-8 items-center shadow-xl shadow-green-500/70 bg-green-500 justify-center gap-2 text-white
-                     hover:bg-white hover:text-green-600 transtion duration-500"
+                        hover:bg-white hover:text-green-600 transtion duration-500"
                             href="">
                             <h2 className="text-xl">Enviar</h2>
                         </button>
@@ -137,4 +240,4 @@ function Reports() {
     );
 }
 
-export default Reports;
+export default Projects;

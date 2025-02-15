@@ -27,7 +27,7 @@ function Top() {
     };
 
     return (
-        <header className="flex justify-center items-center p-2 text-white bg-green-600 w-full">
+        <header className="fixed z-10 flex justify-center items-center p-2 text-white bg-green-600 w-full">
             <nav className="flex flex-row items-center justify-between w-full max-w-[1200px] px-4 py-2">
                 {/* Logo */}
                 <div className="flex flex-row gap-4 items-center">
