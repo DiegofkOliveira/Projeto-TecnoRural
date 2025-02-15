@@ -5,6 +5,7 @@ import { GiCube } from "react-icons/gi";
 import { FaHome } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
+import { Link } from "react-router-dom"
 
 function End() {
     return (
@@ -42,15 +43,15 @@ function End() {
                     </div>
                     <div className="flex flex-col items-center py-4 md:w-1/3 lg:items-center lg:w-1/2">
                         <h6 className="mb-2 font-medium text-xl uppercase">Menu</h6>
-                        <p className="mb-1 text-lg"><a href="/" className="text-neutral-600 dark:text-gray-600 hover:text-gray-200 transtion duration-300">Home</a>
+                        <p className="mb-1 text-lg"><Link to="/" className="text-neutral-600 dark:text-gray-600 hover:text-gray-200 transtion duration-300">Home</Link>
                         </p>
-                        <p className="mb-1 text-lg"><a href="/sobre" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Sobre</a>
+                        <p className="mb-1 text-lg"><Link to="/sobre" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Sobre</Link>
                         </p>
-                        <p className="mb-1 text-lg"><a href="/laudo" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Laudo</a>
+                        <p className="mb-1 text-lg"><Link to="/laudo" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Laudo</Link>
                         </p>
-                        <p className="mb-1 text-lg"><a href="/projeto" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Projeto</a>
+                        <p className="mb-1 text-lg"><Link to="/projeto" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Projeto</Link>
                         </p>
-                        <p className="mb-1 text-lg"><a href="/contato" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Contato</a>
+                        <p className="mb-1 text-lg"><Link to="/contato" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Contato</Link>
                         </p>
                     </div>
                     <div className="flex flex-col items-center w-full py-4 md:w-1/3 md:items-start lg:items-start lg:w-1/4">
