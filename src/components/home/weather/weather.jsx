@@ -20,7 +20,7 @@ function Weather() {
 
     return (
         <div className="w-full h-auto px-8 py-20 flex flex-col items-center justify-center gap-4 relative font-gummy">
-            <div className='w-full max-w-[1200px] h-auto flex flex-row items-start justify-start roudend-md p-8 backdrop-blur-[30px] gap-5 shadow-lg shadow-custom border-[2px] border-[rgba(255,255,255,0.18)]'>
+            <div className='w-full max-w-[1200px] h-auto flex flex-row items-start justify-start rounded-lg p-8 gap-5'>
                 <div className="w-full max-w-[1200px] h-auto flex flex-col items-start justify-start">
                     <div className='flex flex-col w-full items-center justify-start gap-5'>
                         <h2 className="w-full font-normal bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800 font-extralight text-xl lg:text-2xl">Previsão do tempo para os próximos 5 dias</h2>

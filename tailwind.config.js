@@ -10,6 +10,7 @@ export default {
       backgroundImage: {
         'about-fundo': "url('https://portaladama.com/wp-content/uploads/2020/08/Guia-da-Soja-capa-1.jpeg')",
         'home-start': "url('../public/campo.png')",
+        'home-imagem': "url('../public/ImagemInfo.jpg')",
       },
       fontFamily: {
         kanadaka: ["Montserrat", "serif"],

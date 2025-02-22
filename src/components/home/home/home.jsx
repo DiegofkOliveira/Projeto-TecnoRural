@@ -7,7 +7,7 @@ import Information from '../information/information';
 function Home() {
 
     return (
-        <main className='w-full h-auto flex flex-col items-center justify-center bg-gray-100/50'>
+        <main className='w-full h-auto flex flex-col items-center justify-center bg-teal-950'>
             <Start />
             <Information/>
             <Weather />

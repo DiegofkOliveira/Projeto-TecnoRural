@@ -29,9 +29,9 @@ function End() {
                             <img className='w-56 h-40 rounded-lg lg:w-96 lg:h-80' src="https://agro.estadao.com.br/app/uploads/2024/04/soja-768x512.jpg" alt="" />
                             <div className='w-ful h-auto gap-2 flex flex-col justify-center rounded-lg lg:h-80'>
                                 <h1 className='text-xl font-medium font-sriracha bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 lg:text-2xl'>Soja</h1>
-                                <p className='text-base lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Plantio: </span>Outubro a Dezembro</p>
-                                <p className='text-base lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Colheita: </span>Março a Maio</p>
-                                <p className='text-base lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Detalhe: </span>A soja é geralmente semeada na primavera, aproveitando as temperaturas mais altas e a disponibilidade de água. A colheita ocorre no outono.</p>
+                                <p className='text-base text-white lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Plantio: </span>Outubro a Dezembro</p>
+                                <p className='text-base text-white lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Colheita: </span>Março a Maio</p>
+                                <p className='text-base text-white lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Detalhe: </span>A soja é geralmente semeada na primavera, aproveitando as temperaturas mais altas e a disponibilidade de água. A colheita ocorre no outono.</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -40,9 +40,9 @@ function End() {
                             <img className='w-56 h-40 rounded-lg lg:w-96 lg:h-80' src="https://blog.aegro.com.br/wp-content/uploads/2021/02/tipos-de-graos-de-milho-1024x683.jpg" alt="" />
                             <div className='w-ful h-auto gap-2 flex flex-col justify-center rounded-lg lg:h-80'>
                                 <h1 className='text-xl font-medium font-sriracha bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 lg:text-2xl'>Milho</h1>
-                                <p className='text-base lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'> Plantio 1ª Safra: </span>Agosto a Novembro</p>
-                                <p className='text-base lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Colheita 1ª Safra: </span>Dezembro a Março</p>
-                                <p className='text-base lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Detalhe: </span>O milho pode ser cultivado em duas safras no estado. A "safrinha" depende de condições específicas, como a disponibilidade de chuvas no verão.</p>
+                                <p className='text-base text-white lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'> Plantio 1ª Safra: </span>Agosto a Novembro</p>
+                                <p className='text-base text-white lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Colheita 1ª Safra: </span>Dezembro a Março</p>
+                                <p className='text-base text-white lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Detalhe: </span>O milho pode ser cultivado em duas safras no estado. A "safrinha" depende de condições específicas, como a disponibilidade de chuvas no verão.</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -51,9 +51,9 @@ function End() {
                             <img className='w-56 h-40 rounded-lg lg:w-96 lg:h-80' src="https://blog.aegro.com.br/wp-content/uploads/2021/02/tipos-de-graos-de-milho-1024x683.jpg" alt="" />
                             <div className='w-ful h-auto gap-2 flex flex-col justify-center rounded-lg lg:h-80'>
                                 <h1 className='text-xl font-medium font-sriracha bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 lg:text-2xl'>Milho</h1>
-                                <p className='text-base lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Plantio 2ª Safra (safrinha): </span>Janeiro a Março</p>
-                                <p className='text-base lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Colheita 2ª Safra (safrinha): </span>Maio a Julho</p>
-                                <p className='text-base lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Detalhe: </span>O milho pode ser cultivado em duas safras no estado. A "safrinha" depende de condições específicas, como a disponibilidade de chuvas no verão.</p>
+                                <p className='text-base text-white lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Plantio 2ª Safra (safrinha): </span>Janeiro a Março</p>
+                                <p className='text-base text-white lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Colheita 2ª Safra (safrinha): </span>Maio a Julho</p>
+                                <p className='text-base text-white lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Detalhe: </span>O milho pode ser cultivado em duas safras no estado. A "safrinha" depende de condições específicas, como a disponibilidade de chuvas no verão.</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -62,9 +62,9 @@ function End() {
                             <img className='w-56 h-40 rounded-lg lg:w-96 lg:h-80' src="https://img.freepik.com/fotos-premium/agricultor-tem-grao-de-trigo-nas-maos_168410-2670.jpg" alt="" />
                             <div className='w-ful h-auto gap-2 flex flex-col justify-center rounded-lg lg:h-80'>
                                 <h1 className='text-xl font-medium font-sriracha bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 lg:text-2xl'>Trigo</h1>
-                                <p className='text-base lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Plantio: </span>Maio a Julho</p>
-                                <p className='text-base lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Colheita: </span>Setembro a Novembro</p>
-                                <p className='text-base lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Detalhe: </span>O trigo é uma cultura típica de inverno, aproveitando as temperaturas mais amenas e períodos de baixa incidência de pragas.</p>
+                                <p className='text-base text-white lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Plantio: </span>Maio a Julho</p>
+                                <p className='text-base text-white lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Colheita: </span>Setembro a Novembro</p>
+                                <p className='text-base text-white lg:text-xl'><span className='text-base bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 font-medium lg:text-xl'>Detalhe: </span>O trigo é uma cultura típica de inverno, aproveitando as temperaturas mais amenas e períodos de baixa incidência de pragas.</p>
                             </div>
                         </div>
                     </SwiperSlide>

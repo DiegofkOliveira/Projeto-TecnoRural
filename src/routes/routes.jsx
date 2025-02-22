@@ -19,7 +19,7 @@ function Rotas() {
           <Route path="/projeto" element={<Projects />} />
           <Route path="/contato" element={<Contact />} />
         </Routes>
-        <footer className="w-full h-auto flex flex-col items-center justify-center bg-green-500 p-4">
+        <footer className="w-full h-auto flex flex-col items-center justify-center bg-teal-900 p-4">
           <End />
         </footer>
     </Router>

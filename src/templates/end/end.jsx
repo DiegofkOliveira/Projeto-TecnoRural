@@ -1,6 +1,5 @@
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa";
 import { GiCube } from "react-icons/gi";
 import { FaHome } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
@@ -9,20 +8,17 @@ import { Link } from "react-router-dom"
 
 function End() {
     return (
-        <footer className="max-w-[1200px] text-center font-gummy text-neutral-600 dark:bg-green-500 dark:text-gray-600 md:w-full lg:text-left">
+        <footer className="max-w-[1200px] text-center font-gummy dark:bg-teal-900 dark:text-green-100 md:w-full lg:text-left">
             <div className="flex items-center justify-center border-b-2 border-neutral-200 p-4 border-neutral-500 md:justify-between lg:justify-between">
                 <div className="text-lg hidden md:block lg:block">
                     <span>Conecte-se conosco nas redes sociais:</span>
                 </div>
                 <div className="flex justify-center">
-                    <a className="group mr-6 text-gray-600 rounded-full border border-gray-600 p-2 cursor-pointer hover:bg-gray-600 hover:text-gray-200 transtion duration-300" aria-label="Facebook">
+                    <a className="group mr-6 text-green-100 rounded-full border border-green-100 p-2 cursor-pointer hover:text-gray-500 hover:border-gray-500 transtion duration-300" aria-label="Facebook">
                         <FaFacebookF className="w-5 h-5"/>
                     </a>
-                    <a className="group mr-6 text-neutral-600 rounded-full border border-gray-600 p-2 cursor-pointer hover:bg-gray-600 hover:text-gray-200 transtion duration-300" aria-label="Instagram">
+                    <a className="group mr-6 text-green-100 rounded-full border border-green-100 p-2 cursor-pointer hover:text-gray-500 hover:border-gray-500 transtion duration-300" aria-label="Instagram">
                         <FaInstagram className="w-5 h-5"/>
-                    </a>
-                    <a className="group text-neutral-600 rounded-full border border-gray-600 p-2 cursor-pointer hover:bg-gray-600 hover:text-gray-200 transtion duration-300" aria-label="Linkedin">
-                        <FaLinkedinIn className="w-5 h-5"/>
                     </a>
                 </div>
             </div>
@@ -43,15 +39,15 @@ function End() {
                     </div>
                     <div className="flex flex-col items-center py-4 md:w-1/3 lg:items-center lg:w-1/2">
                         <h6 className="mb-2 font-medium text-xl uppercase">Menu</h6>
-                        <p className="mb-1 text-lg"><Link to="/" className="text-neutral-600 dark:text-gray-600 hover:text-gray-200 transtion duration-300">Home</Link>
+                        <p className="mb-1 text-lg"><Link to="/" className="text-neutral-600 dark:text-green-100 hover:text-gray-500 transtion duration-300">Home</Link>
                         </p>
-                        <p className="mb-1 text-lg"><Link to="/sobre" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Sobre</Link>
+                        <p className="mb-1 text-lg"><Link to="/sobre" className="text-neutral-600 font-normal dark:text-green-100 hover:text-gray-500 transtion duration-200">Sobre</Link>
                         </p>
-                        <p className="mb-1 text-lg"><Link to="/laudo" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Laudo</Link>
+                        <p className="mb-1 text-lg"><Link to="/laudo" className="text-neutral-600 font-normal dark:text-green-100 hover:text-gray-500 transtion duration-200">Laudo</Link>
                         </p>
-                        <p className="mb-1 text-lg"><Link to="/projeto" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Projeto</Link>
+                        <p className="mb-1 text-lg"><Link to="/projeto" className="text-neutral-600 font-normal dark:text-green-100 hover:text-gray-500 transtion duration-200">Projeto</Link>
                         </p>
-                        <p className="mb-1 text-lg"><Link to="/contato" className="text-neutral-600 font-normal dark:text-gray-600 hover:text-gray-200 transtion duration-200">Contato</Link>
+                        <p className="mb-1 text-lg"><Link to="/contato" className="text-neutral-600 font-normal dark:text-green-100 hover:text-gray-500 transtion duration-200">Contato</Link>
                         </p>
                     </div>
                     <div className="flex flex-col items-center w-full py-4 md:w-1/3 md:items-start lg:items-start lg:w-1/4">
@@ -72,10 +68,10 @@ function End() {
                 </div>
             </div>
 
-            <div className="w-full bg-green-200 p-6 text-center bg-green-500">
-                <span className="text-gray-600 font-normal">© 2025 Copyright: Desenvolvido por </span>
+            <div className="w-full bg-teal-900 p-6 text-center bg-green-500">
+                <span className="text-green-100 font-normal">© 2025 Copyright: Desenvolvido por </span>
                 <a
-                    className="font-normal text-gray-600 hover:text-gray-200"
+                    className="font-normal hover:text-gray-500"
                     href="https://new-portifolio-eta-two.vercel.app/?fbclid=PAZXh0bgNhZW0CMTEAAaaQz-P1TamFKoLnb1kuPvdcSZpqRYMuTyAlHjNpkcb0k_74DPcyai81gRQ_aem_PDrYv_UPeR1PsoRWcQi6NQ"
                 >Dev Diego</a>
             </div>
