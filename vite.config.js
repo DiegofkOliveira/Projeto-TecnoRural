@@ -8,4 +8,9 @@ export default defineConfig({
     host: true, // Permite o acesso pelo IP da máquina
     port: 5173, // Define a porta que será usada pelo servidor
   },
+  resolve: {
+    alias: {
+      '/assets': '/src/assets'
+    }
+  }
 })

@@ -2,7 +2,7 @@ import { IoIosArrowDropdown } from "react-icons/io";
 
 function Information() {
     return (
-        <div className="w-full h-auto min-h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../../../public/ImagemInfo.jpg')]">
+        <div className="w-full h-auto min-h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../../../../public/ImagemInfo.jpg')]">
             <div className="w-full max-w-[1200px] h-auto flex flex-col items-center justify-center gap-10 py-20 font-gummy">
                 <h2 className="text-3xl font-medium bg-clip-text text-center text-green-500">Porque nosso trabalho faz a diferença</h2>
                 <div className="w-full h-auto flex flex-col text-justify items-center justify-center gap-4 md:px-4 md:flex-row lg:flex-row">
