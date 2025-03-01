@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { TiArrowRightOutline } from "react-icons/ti";
+import TecnoRural from "../../../assets/Tecnorural.png";
 
 function Start() {
     const navigate = useNavigate();
@@ -10,9 +11,9 @@ function Start() {
 
     return (
         <div className="w-full h-auto min-h-screen pb-16 flex items-center justify-center font-gummy">
-            <div className="w-full h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../assets/campo.png')] lg:flex-row lg:justify-center">
+            <div className="w-full h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/campo.png')] lg:flex-row lg:justify-center">
                 <div className="flex flex-col items-center justify-center w-full h-auto md:w-1/2 lg:w-1/3">
-                    <img className="w-60 md:w-2/3 lg:w-2/3" src="../assets/Tecnorural.png" alt="Logo no centro" />
+                    <img className="w-60 md:w-2/3 lg:w-2/3" src={TecnoRural} alt="Logo no centro" />
                     <h1 className="text-3xl h-10 font-extralight text-white">Técnologia e Técnica</h1>
                     <p className="bg-clip-text h-16 font-light text-transparent bg-gradient-to-r from-green-300 to-teal-500 text-3xl">A Favor do Agro</p>
                 </div>

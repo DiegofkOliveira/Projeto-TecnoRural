@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import Logo from '../../assets/Marca.png';
 
 function Top() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ function Top() {
                 {/* Logo */}
                 <div className="flex flex-row gap-4 items-center">
                     <Link to="/">
-                        <img className="w-20" src="../assets/Marca.png" alt="Logo da Empresa" />
+                        <img className="w-20" src={Logo} alt="Logo da Empresa" />
                     </Link>
                 </div>
 

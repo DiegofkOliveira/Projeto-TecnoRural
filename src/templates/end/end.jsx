@@ -4,6 +4,7 @@ import { FaHome } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { Link } from "react-router-dom"
+import Logo from "../../assets/Marca.png";
 
 function End() {
     return (
@@ -28,7 +29,7 @@ function End() {
                         <div className="flex flex-col w-full justify-start py-4 text-left md:w-1/2 lg:text-left lg:w-1/2 ">
                             <h6
                                 className="mb-4 flex items-center gap-2 justify-center font-normal text-2xl md:justify-start">
-                                <img className="w-20" src="../assets/Marca.png" alt="" />
+                                <img className="w-20" src={Logo} alt="" />
                                 TECNORURAL
                             </h6>
                             <p className="font-light text-sm hidden md:text-lg md:block lg:text-lg lg:block">
