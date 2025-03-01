@@ -134,7 +134,7 @@ function Laudos() {
     };
 
     return (
-        <div className="w-full h-auto min-h-screen flex flex-col items-center justify-center pt-28 pb-5 font-gummy bg-no-repeat bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../../assets/ImagemInfo.jpg')]">
+        <div className="w-full h-auto min-h-screen flex flex-col items-center justify-center pt-28 pb-5 font-gummy bg-no-repeat bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/ImagemInfo.jpg')]">
             {/* Título */}
             <div className="max-w-[1200px] w-full h-24 flex px-8 py-8 items-center justify-between font-extralight">
                 <div className="w-80 h-auto flex gap-10">
