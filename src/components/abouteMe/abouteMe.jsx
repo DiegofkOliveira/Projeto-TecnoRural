@@ -2,12 +2,12 @@ import { FaRegBuilding, FaEye } from "react-icons/fa";
 import { LuRocket } from "react-icons/lu";
 import { GoMortarBoard } from "react-icons/go";
 import { IoDiamondSharp } from "react-icons/io5";
-import TecAgricola from '../../../public/tecAgr.png';
+import TecAgricola from '../../assets/tecAgr.png';
 
 export default function Sobre() {
     return (
         <div className="w-full h-auto flex flex-col items-center justify-center pt-28 pb-5 font-gummy bg-teal-950">
-            <div className='max-w-[1200px] h-auto flex flex-col px-8 py-10 items-start justify-center font-extralight'>
+            <div className="max-w-[1200px] h-auto flex flex-col px-8 py-10 items-start justify-center font-extralight">
                 <div className='w-56 h-auto flex gap-10'>
                     <FaRegBuilding className="w-8 h-8 text-green-700" />
                     <h3 className='text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800'>Empresa</h3>
@@ -24,7 +24,7 @@ export default function Sobre() {
                 </div>
             </div>
             <div className='max-w-[1200px] h-full flex items-end justify-center bg-about-fundo bg-cover shadow-xl shadow-gray-500/50 rounded-lg md:bg-auto lg:bg-auto'>
-                <div className='w-2/3 h-80 px-2 flex flex-col justify-center items-start backdrop-blur-[50px] shadow-lg shadow-custom border-none md:backdrop-blur-none md:shadow-none md:w-1/2 md:h-96'>
+                <div className='w-2/3 h-80 px-2 flex flex-col justify-center items-start backdrop-blur-[100px] bg-green-100 shadow-lg shadow-custom border-none md:bg-transparent md:backdrop-blur-none md:shadow-none md:w-1/2 md:h-96'>
                     <h1 className='w-full text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800 md:text-3xl'>Do Campo para o Futuro: Nosso Compromisso com este chão</h1>
                 </div>
                 <div className='flex items-end'>

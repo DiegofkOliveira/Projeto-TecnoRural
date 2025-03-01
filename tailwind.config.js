@@ -8,14 +8,12 @@ export default {
         'custom': '0px 0px 30px rgba(227, 228, 237, 0.37)',
       },
       backgroundImage: {
-        'about-fundo': "url('https://portaladama.com/wp-content/uploads/2020/08/Guia-da-Soja-capa-1.jpeg')",
-        'home-start': "url('../public/campo.png')",
+        'about-fundo': "url('../src/assets/Capa.jpeg')",
+        'home-start': "url('../src/assets/campo.png')",
         'home-imagem': "url('../public/ImagemInfo.jpg')",
       },
       fontFamily: {
-        kanadaka: ["Montserrat", "serif"],
-        gummy: ["Sour Gummy", "serif"],
-        sriracha: ["Sriracha", "serif"]
+        gummy: ["Sour Gummy", "serif"]
       }
     },
   },

@@ -1,9 +1,8 @@
 /* eslint-disable react/no-unknown-property */
 import { useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
-import { PiMicrosoftOutlookLogo } from "react-icons/pi";
-import { SiThunderbird } from "react-icons/si";
+import { LuMailOpen } from "react-icons/lu";
+import { LuMail } from "react-icons/lu";
 import { IoIosArrowDropdown } from "react-icons/io";
 import Swal from "sweetalert2";
 
@@ -15,6 +14,9 @@ function Contact() {
         subject: "",
         message: "",
     });
+
+    // Estado para controlar se o e-mail foi copiado
+    const [emailCopied, setEmailCopied] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -102,8 +104,40 @@ function Contact() {
         }
     };
 
+    // Função para copiar o e-mail para a área de transferência
+    const handleCopyEmail = async () => {
+        try {
+            const email = "danieloliveira1804@gmail.com"; // E-mail cadastrado
+            await navigator.clipboard.writeText(email);
+            setEmailCopied(true); // Altera o ícone para aberto
+
+            // Feedback visual com Swal
+            Swal.fire({
+                title: "Copiado!",
+                text: "E-mail copiado para a área de transferência.",
+                icon: "success",
+                confirmButtonText: "OK",
+                timer: 2000,
+                timerProgressBar: true,
+            });
+
+            // Reverte o ícone para fechado após 3 segundos (opcional)
+            setTimeout(() => {
+                setEmailCopied(false);
+            }, 3000);
+        } catch (error) {
+            console.error("Erro ao copiar e-mail:", error);
+            Swal.fire({
+                title: "Erro!",
+                text: "Não foi possível copiar o e-mail. Tente novamente.",
+                icon: "error",
+                confirmButtonText: "OK",
+            });
+        }
+    };
+
     return (
-        <div className="w-full h-auto flex flex-col items-center justify-center pt-28 pb-5 font-gummy bg-teal-950">
+        <div className="w-full h-auto flex flex-col items-center justify-center pt-28 pb-5 font-gummy bg-no-repeat bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../assets/contato.png')]">
             <div className='max-w-[1200px] w-full h-24 flex px-8 py-8 items-center justify-between font-extralight'>
                 <div className='w-80 h-auto flex items-center gap-10'>
                     <IoIosArrowDropdown className="w-10 h-10 text-green-800" />
@@ -111,33 +145,25 @@ function Contact() {
                 </div>
             </div>
             <div className="w-full max-w-[1200px] h-auto flex items-center justify-center">
-                <div className="grid grid-cols-2 gap-4 w-full h-auto max-w-[800px] items-center justify-items-center md:px-0 md:justify-center md:flex">
-                    <a className="group flex flex-col border border-green-600 rounded-xl w-32 h-32 items-center shadow-xl shadow-green-500 justify-center gap-2 text-green-600 hover:bg-green-600 hover:text-white transtion duration-500"
-                        href="https://wa.me/555599154228?text=Olá, gostaria de saber mais!"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <FaWhatsapp className="w-10 h-10" />
-                        <h2 className="text-xl">WhatsApp</h2>
-                    </a>
-                    <a className="group flex flex-col border border-red-600 rounded-xl w-32 h-32 items-center shadow-xl shadow-red-500 justify-center gap-2 text-red-600 hover:bg-red-600 hover:text-white transtion duration-500"
+                <div className="flex gap-4 w-full h-auto max-w-[800px] items-center justify-center">
+                    <a className="group flex flex-row border border-red-600 rounded-xl w-48 h-20 items-center shadow-xl shadow-red-500 justify-center gap-2 text-red-600 hover:bg-red-600 hover:text-white transtion duration-500"
                         href="https://mail.google.com/mail/?view=cm&fs=1&to=danieloliveira1804@gmail.com&su=Assunto&body=Mensagem"
                         target="_blank"
                         rel="noopener noreferrer">
                         <BiLogoGmail className="w-10 h-10" />
                         <h2 className="text-xl">Gmail</h2>
                     </a>
-                    <a className="group flex flex-col border border-sky-600 rounded-xl w-32 h-32 items-center shadow-xl shadow-sky-500 justify-center gap-2 text-sky-600 hover:bg-sky-600 hover:text-white transtion duration-500"
-                        href="https://outlook.live.com/mail/0/deeplink/compose?to=danieloliveira1804@gmail.com&subject=Assunto&body=Mensagem"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <PiMicrosoftOutlookLogo className="w-10 h-10" />
-                        <h2 className="text-xl">Outlook</h2>
-                    </a>
-                    <a className="group flex flex-col border border-blue-600 rounded-xl w-32 h-32 items-center shadow-xl shadow-blue-500 justify-center gap-2 text-blue-600 hover:bg-blue-600 hover:text-white transtion duration-500"
-                        href="mailto:danieloliveira1804@gmail.com?subject=Assunto&body=Mensagem">
-                        <SiThunderbird className="w-10 h-10" />
-                        <h2 className="text-xl">Thunderbird</h2>
-                    </a>
+                    <button
+                        onClick={handleCopyEmail}
+                        className="group flex flex-row border border-blue-600 rounded-xl w-48 h-20 items-center shadow-xl shadow-blue-500 justify-center gap-2 text-blue-600 hover:bg-blue-600 hover:text-white transition duration-500"
+                    >
+                        {emailCopied ? (
+                            <LuMailOpen className="w-10 h-10" />
+                        ) : (
+                            <LuMail className="w-10 h-10" />
+                        )}
+                        <h2 className="text-xl">Copiar E-mail</h2>
+                    </button>
                 </div>
             </div>
             <div className="w-full max-w-[1200px] h-auto py-20 flex flex-col items-center justify-center gap-6 ">

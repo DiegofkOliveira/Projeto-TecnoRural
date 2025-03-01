@@ -5,25 +5,26 @@ function Start() {
     const navigate = useNavigate();
 
     const handleButtonClick = () => {
-        navigate("/sobre")
+        navigate("/Quem somos")
     }
-    
+
     return (
-        <div className='w-full h-auto min-h-screen pt-28 pb-16 flex flex-row items-center justify-center'>
-            <div className='w-full h-[300px] flex flex-row items-center justify-start gap-5 bg-home-start bg-cover shadow-xl shadow-gray-500/50 rounded-lg md:bg-cover md:max-w-[1200px] md:h-[500px] md:px-8 lg:bg-auto lg:max-w-[1200px] lg:h-[500px] lg:px-8'>
-                <div className='w-56 h-full flex flex-col gap-2 px-4 py-10 items-center justify-center backdrop-blur-[20px] shadow-lg shadow-custom border-none md:w-1/2 lg:w-1/2'>
-                    <div className='p-2 flex flex-col items-center justify-center font-gummy md:w-4/5 md:h-3/4 lg:w-4/5 lg:h-1/2'>
-                        <h1 className="text-lg font-extralight text-justify text-white md:text-2xl lg:text-3xl">Seja <span className="bg-clip-text font-light text-transparent bg-gradient-to-r 
-                        from-green-300 to-teal-500 text-lg uppercase md:text-2xl lg:text-3xl">bem-vindo</span> à nossa plataforma, onde você
-                            encontra <span className="bg-clip-text font-light text-transparent bg-gradient-to-r from-green-300 to-teal-500 text-lg uppercase md:text-2xl lg:text-3xl">suporte </span> 
-                            para quem <span className="bg-clip-text font-light text-transparent bg-gradient-to-r from-green-300 to-teal-500 text-lg uppercase md:text-2xl lg:text-3xl">vive e trabalha</span> no campo.
-                        </h1>
-                    </div>
-                    <div className='w-40 h-auto p-2 flex justify-end font-gummy md:w-80 lg:w-80'>
+        <div className="w-full h-auto min-h-screen pb-16 flex items-center justify-center font-gummy">
+            <div className="w-full h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../assets/campo.png')] lg:flex-row lg:justify-center">
+                <div className="flex flex-col items-center justify-center w-full h-auto md:w-1/2 lg:w-1/3">
+                    <img className="w-60 md:w-2/3 lg:w-2/3" src="../assets/Tecnorural.png" alt="Logo no centro" />
+                    <h1 className="text-3xl h-10 font-extralight text-white">Técnologia e Técnica</h1>
+                    <p className="bg-clip-text h-16 font-light text-transparent bg-gradient-to-r from-green-300 to-teal-500 text-3xl">A Favor do Agro</p>
+                </div>
+                <div className="relative w-full h-auto flex flex-col px-8 items-end justify-center md:px-10 md:w-2/3 lg:w-1/3 overflow-x-hidden">
+                    <div className="absolute w-full h-full rounded-lg right-1 z-0 overflow-hidden border-2 border-green-100 skew-x-[-10deg] "></div>
+                    <p className="bg-clip-text h-auto font-light text-green-100 text-2xl md:text-3xl">Suporte completo em projetos e laudos técnicos para atender às mais diversas
+                        necessidades do campo</p>
+                    <div className="flex w-1/2 z-10 justify-end pt-10">
                         <button onClick={handleButtonClick} type="submit" className="group flex border-none rounded-xl w-40 h-10 items-center shadow-xl shadow-teal-800 
                         justify-center gap-2 text-base text-teal-800 bg-white hover:bg-teal-800 hover:text-white transtion duration-500 md md:text-xl lg:text-xl">
                             Saiba Mais
-                            <TiArrowRightOutline className="w-4 h-4 md:w-6 h-6 lg:w-6 h-6"/>
+                            <TiArrowRightOutline className="w-4 h-4 md:w-6 h-6 lg:w-6 h-6" />
                         </button>
                     </div>
                 </div>

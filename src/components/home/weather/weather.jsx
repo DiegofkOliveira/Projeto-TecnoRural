@@ -19,8 +19,8 @@ function Weather() {
     }
 
     return (
-        <div className="w-full h-auto px-8 py-20 flex flex-col items-center justify-center gap-4 relative font-gummy">
-            <div className='w-full max-w-[1200px] h-auto flex flex-row items-start justify-start rounded-lg p-8 gap-5'>
+        <div className="w-full h-auto px-2 py-20 flex flex-col items-center justify-center gap-4 relative font-gummy md:px-8">
+            <div className='w-full max-w-[1200px] h-auto flex flex-row items-start justify-start rounded-lg gap-5 md:p-8'>
                 <div className="w-full max-w-[1200px] h-auto flex flex-col items-start justify-start">
                     <div className='flex flex-col w-full items-center justify-start gap-5'>
                         <h2 className="w-full font-normal bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800 font-extralight text-xl lg:text-2xl">Previsão do tempo para os próximos 5 dias</h2>
@@ -29,7 +29,7 @@ function Weather() {
                                 ref={inputRef}
                                 type="text"
                                 placeholder="Digite o nome da cidade"
-                                className="w-full h-full pl-4 outline-none font-kanadaka placeholder-gray-500 text-sm"
+                                className="w-full h-full pl-4 outline-none font-kanadaka placeholder-gray-500 text-lg"
                                 onKeyDown={(event) => {
                                     if (event.key === 'Enter') {
                                         searchCity(); // Chama a função de busca quando a tecla "Enter" é pressionada
