@@ -77,7 +77,7 @@ function Top() {
 
                 {/* Menu Desktop */}
                 <ul className="hidden lg:flex lg:space-x-6 lg:gap-6">
-                    {["Home", "Quem somos", "Laudo", "Projeto", "Contato"].map((item, index) => (
+                    {["Quem somos", "Laudo", "Projeto", "Contato"].map((item, index) => (
                         <li key={index} className="text-xl font-gummy text-green-100 hover:text-gray-500 transition duration-200">
                             <Link to={item === "Home" ? "/" : `/${item.toLowerCase()}`}>{item}</Link>
                         </li>
