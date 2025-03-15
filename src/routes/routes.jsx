@@ -3,7 +3,7 @@ import Top from "../templates/top/top.jsx";
 import Home from "../components/home/home/home.jsx";
 import AboutMe from "../components/abouteMe/abouteMe.jsx";
 import Reports from "../components/reports/reports.jsx";
-import Projects from "../components/projects/projects.jsx";
+import Projects from "../components/projects/Projects.jsx";
 import Contact from "../components/contacts/contacts.jsx";
 import End from '../templates/end/end.jsx';
 import { FaWhatsapp } from 'react-icons/fa'

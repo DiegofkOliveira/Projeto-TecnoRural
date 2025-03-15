@@ -14,18 +14,18 @@ export default function Sobre() {
                 </div>
                 <div className='max-w-[1200px] h-auto flex justify-center items-center'>
                     <p className='font-extralight text-xl text-green-100 w-4/5 text-justify py-10'>
-                        A nossa empresa é <span className='font-light bg-clip-text font-2xl font-light text-transparent bg-gradient-to-r from-green-500 to-green-500'>parceira de todos os produtores rurais</span>,
+                        A nossa empresa é <span className='font-light bg-clip-text font-2xl text-transparent bg-gradient-to-r from-green-500 to-green-500'>parceira de todos os produtores rurais</span>,
                         oferecendo suporte completo em projetos e laudos técnicos para atender às mais diversas
-                        necessidades do campo. Contamos com uma <span className='font-light bg-clip-text font-2xl font-light text-transparent bg-gradient-to-r from-green-500 to-green-500'>equipe de técnicos altamente qualificados</span>,
-                        comprometidos com o desenvolvimento sustentável e a valorização do trabalho no campo. Nosso compromisso é com este chão, <span className='font-light bg-clip-text font-2xl font-light text-transparent bg-gradient-to-r from-green-500 to-green-500'>
+                        necessidades do campo. Contamos com uma <span className='font-light bg-clip-text font-2xl text-transparent bg-gradient-to-r from-green-500 to-green-500'>equipe de técnicos altamente qualificados</span>,
+                        comprometidos com o desenvolvimento sustentável e a valorização do trabalho no campo. Nosso compromisso é com este chão, <span className='font-light bg-clip-text font-2xl text-transparent bg-gradient-to-r from-green-500 to-green-500'>
                             com cada plantação, colheita e cuidado</span>, garantindo soluções confiáveis e alinhadas às
-                        demandas do setor agrícola. Juntos, <span className='font-light font-2xl bg-clip-text font-light text-transparent bg-gradient-to-r from-green-500 to-green-500'>cultivamos resultados que fazem a diferença para você e para o futuro da agricultura.</span>
+                        demandas do setor agrícola. Juntos, <span className='font-light font-2xl bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-500'>cultivamos resultados que fazem a diferença para você e para o futuro da agricultura.</span>
                     </p>
                 </div>
             </div>
             <div className='max-w-[1200px] h-full flex items-end justify-center bg-about-fundo bg-cover shadow-xl shadow-gray-500/50 rounded-lg md:bg-auto lg:bg-auto'>
-                <div className='w-2/3 h-80 px-2 flex flex-col justify-center items-start backdrop-blur-[100px] bg-green-100 shadow-lg shadow-custom border-none md:bg-transparent md:backdrop-blur-none md:shadow-none md:w-1/2 md:h-96'>
-                    <h1 className='w-full text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800 md:text-3xl'>Do Campo para o Futuro: Nosso Compromisso com este chão</h1>
+                <div className='w-2/3 h-80 px-2 flex flex-col justify-center items-start backdrop-blur-[100px] bg-green-100 border-none md:bg-transparent md:backdrop-blur-none md:shadow-none md:w-1/2 md:h-96'>
+                    <h1 className='w-full text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-800 md:text-3xl'>Do Campo para o Futuro: Técnologia e técnica a favor do agro.</h1>
                 </div>
                 <div className='flex items-end'>
                     <img className="w-100 h-100" src={TecAgricola} alt="Imagem de uma pessoa segurando um aparelho portatil" />

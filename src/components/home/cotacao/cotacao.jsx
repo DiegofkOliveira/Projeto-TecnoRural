@@ -8,7 +8,7 @@ function Cotacao() {
         milho: 'R$ 0.00',
         trigo: 'R$ 0.00',
         date: 'N/A',
-        time: '09:20 ou 14:00' // Horário fixo ajustado para refletir as coletas (09h20 ou 14h00)
+        time: 'N/A'
     });
 
     useEffect(() => {
@@ -25,34 +25,17 @@ function Cotacao() {
                 const data = await response.json();
                 console.log('Dados recebidos:', data);
 
-                if (!data || data.length === 0 || !data[0]) {
-                    // Caso o histórico esteja vazio, use valores padrão
-                    setCotacaoAtual({
-                        soja: 'R$ 0.00',
-                        milho: 'R$ 0.00',
-                        trigo: 'R$ 0.00',
-                        date: 'N/A',
-                        time: '09:20 ou 14:00'
-                    });
-                    return;
+                if (!data || !data.cotacoes) {
+                    throw new Error('Nenhum dado de cotação disponível.');
                 }
 
-                // Formata a data fora do objeto
-                const [year, month, day] = data[0].date.split('-'); // Divide a data no formato "YYYY-MM-DD"
-                const formattedDate = `${day}/${month}/${year}`; // Formata para "DD/MM/YYYY"
-
-                // Determina o horário com base na hora atual (simplificado)
-                const now = new Date();
-                const hour = now.getHours();
-                let updateTime = '09:20';
-                if (hour >= 14) updateTime = '14:00'; // Assume que após 14h é a coleta das 14h
-
+                // Formata os valores
                 const cotacaoFormatada = {
-                    soja: `R$ ${data[0].cotacoes.soja.toFixed(2)}`,
-                    milho: `R$ ${data[0].cotacoes.milho.toFixed(2)}`,
-                    trigo: `R$ ${data[0].cotacoes.trigo.toFixed(2)}`,
-                    date: formattedDate,
-                    time: updateTime // Horário dinâmico baseado na última coleta
+                    soja: `R$ ${data.cotacoes.soja.toFixed(2)}`,
+                    milho: `R$ ${data.cotacoes.milho.toFixed(2)}`,
+                    trigo: `R$ ${data.cotacoes.trigo.toFixed(2)}`,
+                    date: data.data || 'N/A',
+                    time: data.hora || 'N/A'
                 };
 
                 setCotacaoAtual(cotacaoFormatada);
@@ -64,13 +47,20 @@ function Cotacao() {
                     icon: "error",
                     confirmButtonText: "OK",
                 });
+                setCotacaoAtual({
+                    soja: 'R$ 0.00',
+                    milho: 'R$ 0.00',
+                    trigo: 'R$ 0.00',
+                    date: 'N/A',
+                    time: 'N/A'
+                });
             }
         };
 
         // Executa a busca inicial
         fetchCotacaoAtual();
 
-        // Configura a verificação periódica para atualizar o horário (opcional, se desejar manter)
+        // Configura a verificação periódica (opcional, a cada hora)
         const intervalId = setInterval(() => {
             fetchCotacaoAtual();
         }, 3600000); // Verifica a cada hora (ajuste conforme necessário)
@@ -81,7 +71,7 @@ function Cotacao() {
 
     return (
         <div className="w-full h-auto px-2 py-20 flex flex-col items-center justify-center gap-4 relative bg-teal-950">
-            <div className='w-full max-w-[1200px] h-auto flex flex-col items-center justify-center rounded-md p-2 bg-green-100 backdrop-blur-[30px] gap-5 shadow-lg shadow-custom border-[2px] border-[rgba(255,255,255,0.18)]'>
+            <div className='w-full max-w-[1200px] h-auto flex flex-col items-center justify-center rounded-md p-2 bg-green-100 backdrop-blur-[30px] gap-5 border-[2px] border-[rgba(255,255,255,0.18)]'>
                 <div className="flex flex-col w-full h-auto items-start justify-start py-2 gap-6">
                     <div className="w-80 h-auto flex items-center gap-10">
                         <IoIosArrowDropdown className="w-8 h-8 text-green-800" />
@@ -112,7 +102,7 @@ function Cotacao() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Cotacao;

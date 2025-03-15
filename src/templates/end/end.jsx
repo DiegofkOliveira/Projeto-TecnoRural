@@ -10,7 +10,7 @@ function End() {
     return (
         <footer className="w-full h-auto flex flex-col items-center justify-center bg-teal-900 p-4" >
             <div className="max-w-[1200px] text-center font-gummy dark:bg-teal-900 dark:text-green-100 md:w-full lg:text-left">
-                <div className="flex items-center justify-center border-b-2 border-neutral-200 py-4 border-neutral-500 md:justify-between lg:justify-between">
+                <div className="flex items-center justify-center border-b-2 py-4 border-neutral-500 md:justify-between lg:justify-between">
                     <div className="text-lg hidden md:block lg:block">
                         <span>Conecte-se conosco nas redes sociais:</span>
                     </div>
@@ -58,7 +58,7 @@ function End() {
                             </p>
                             <p className="flex items-center gap-4 mb-2 text-base">
                                 <FaEnvelope className="w-5 h-5" />
-                                tecnorural@gmail.com
+                                tecnorural6@gmail.com
                             </p>
                             <p className="flex items-center gap-4 mb-2 text-base">
                                 <FaPhone className="w-5 h-5" />
@@ -68,7 +68,7 @@ function End() {
                     </div>
                 </div>
 
-                <div className="w-full bg-teal-900 p-6 text-center bg-green-500">
+                <div className="w-full bg-teal-900 p-6 text-center">
                     <span className="text-green-100 font-normal">© 2025 Copyright: Desenvolvido por </span>
                     <a
                         className="font-normal hover:text-gray-500"

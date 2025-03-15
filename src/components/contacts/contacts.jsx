@@ -107,7 +107,7 @@ function Contact() {
     // Função para copiar o e-mail para a área de transferência
     const handleCopyEmail = async () => {
         try {
-            const email = "danieloliveira1804@gmail.com"; // E-mail cadastrado
+            const email = "tecnorural6@gmail.com"; // E-mail cadastrado
             await navigator.clipboard.writeText(email);
             setEmailCopied(true); // Altera o ícone para aberto
 
@@ -147,7 +147,7 @@ function Contact() {
             <div className="w-full max-w-[1200px] h-auto flex items-center justify-center">
                 <div className="flex gap-4 w-full h-auto max-w-[800px] items-center justify-center">
                     <a className="group flex flex-row border border-red-600 rounded-xl w-48 h-20 items-center shadow-xl shadow-red-500 justify-center gap-2 text-red-600 hover:bg-red-600 hover:text-white transtion duration-500"
-                        href="https://mail.google.com/mail/?view=cm&fs=1&to=danieloliveira1804@gmail.com&su=Assunto&body=Mensagem"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=tecnorural6@gmail.com&su=Assunto&body=Mensagem"
                         target="_blank"
                         rel="noopener noreferrer">
                         <BiLogoGmail className="w-10 h-10" />
